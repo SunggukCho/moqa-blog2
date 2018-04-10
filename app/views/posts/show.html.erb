@@ -21,48 +21,47 @@
 						</div>
 						<!-- blog tags -->
 						<div class="blog-tags">
-  						<h5>Tags :</h5>
-							<div class="blog-tags-icon"><i class="fa fa-tag"></i>Web</div>
-							<div class="blog-tags-icon"><i class="fa fa-tag"></i>Design</div>
-							<div class="blog-tags-icon"><i class="fa fa-tag"></i>Marketing</div>
-							<div class="blog-tags-icon"><i class="fa fa-tag"></i>Development</div>
-							<div class="blog-tags-icon"><i class="fa fa-tag"></i>Branding</div>
-							<div class="blog-tags-icon"><i class="fa fa-tag"></i>Photography</div>
+  						<span>Tags :</span>
+	  						<% @post.tag_list.each do |tag| %>
+	  							<div class="blog-tags-icon"><i class="fa fa-tag"></i><%= tag %></div>
+							<% end %>
 						</div>
 						<!-- blog tags -->
 						<!--List, edit, destroy-->
 					<br>
 						<div class="blog-tags-plus">
-						  <%= link_to '목록으로', posts_path%>
+						  <%= link_to '목록으로', posts_path %>
+						<% if can? :update, @post %>  
 			              <%= link_to 'Edit', edit_post_path(@post) %> 
 			              <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %> 
+						<% end %>
 						</div>	
 					<br>
             		<p id="notice"><%= notice %></p>
 					<!--Disqus 댓글-->
 					<div id="disqus_thread"></div>
-					<script>
-					
-					/**
-					*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-					*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-					/*
-					var disqus_config = function () {
-					this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-					this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-					};
-					*/
-					(function() { // DON'T EDIT BELOW THIS LINE
-					var d = document, s = d.createElement('script');
-					s.src = 'https://moqaapp.disqus.com/embed.js';
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-					})();
-					</script>
-					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-					                            
-					</div>
-				</div>
+			<script>
+			
+			/**
+			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+			/*
+			var disqus_config = function () {
+			this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+			this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			*/
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = 'https://moqaapp.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			                            
 			</div>
-		</div>	
-<%=render 'footer' %>
+		</div>
+	</div>
+</div>	
+<%= render 'footer' %>

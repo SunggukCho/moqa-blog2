@@ -366,6 +366,7 @@ header {
 .blog-box > .blog-content > .blog-title{
     // margin-top: 10px;
     font-size: 21px !important;
+    margin-top: 10px;
 }
 .blog-box > .blog-content> .blog-title:hover{
     font-size: 21px;
@@ -790,70 +791,56 @@ header {
   }
 }
 
-
-
-/*------------------------------------*\
-	Owl theme
-\*------------------------------------*/
-
-/* -- dots -- */
-
-.owl-theme .owl-dots .owl-dot span {
-    border: none;
-    background: #EEE;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-}
-
-.owl-theme .owl-dots .owl-dot:hover span {
-    background: #999999;
-}
-.owl-theme .owl-dots .owl-dot.active span {
-	  background: #999999;
-	  width:20px;
-}
-
 /* -- nav -- */
-
-.owl-theme .owl-nav {
-    opacity: 0;
-    -webkit-transition: 0.2s opacity;
-    transition: 0.2s opacity;
+nav a{
+    color: #fff !important;
 }
 
-.owl-theme:hover .owl-nav {
-    opacity: .3;
+.navbar-brand {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff !important;
+    margin: 0;
+    line-height: 1;
+    padding: 0;
 }
 
-.owl-theme .owl-nav [class*='owl-'] {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background: #999999;
-    color: #FFF;
-  	padding: 0px;
-  	width: 50px;
-  	height: 50px;
-  	border-radius:3px;
-  	line-height: 50px;
-  	margin: 0;
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #42c9a9 !important;
 }
 
-.owl-theme .owl-prev {
-    left: 0px;
+#nav .nav-link {
+    color: #000;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 30px;
+    -webkit-transition-duration: 50ms;
+    -o-transition-duration: 50ms;
+    transition-duration: 50ms;
+    padding: 1em 1em;
 }
-
-.owl-theme .owl-next {
-    right: 0px;
+nav ul li{
+    margin-right: 1em;
 }
-
-.owl-theme .owl-nav [class*='owl-']:hover {
-    opacity: 0.8;
-    background: #999999;
+nav ul li > a:hover {
+    color: #ccc !important;
+    font-size: 130% !important;
+    text-decoration: underline !important;
 }
-
+.navbar-toggler{
+    border: transparent;
+}
+.navbar {
+    display: flex !important;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #ccc !important;
+    border-radius: 0 !important;
+}
+.navbar-nav{
+    flex-direction: row !important;
+}
 
 /*------------------------------------*\
 	Back to top

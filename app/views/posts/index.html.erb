@@ -1,47 +1,51 @@
 <%= render 'navbar' %>
-	<div id="blog" class="section md-padding bg-white">
-		<!-- Container -->
-		<div class="container" id="post-body">
-			<!-- Row -->
-			<div class="row">
-				<!-- Section header -->
-				<div class="section-header text-center col-md-12">
-					<h2 class="title">Blog</h2>
-				</div>
-				<!-- /Section header -->
-				<!-- blog -->
-      
-		          <% @posts.each do |post| %>
-		          <div class="col-lg-4 col-md-6 col-sm-12">
-		  		  	<div class="blog-card">
-		  		  		<div class="blog-box">
-				  			<div class="blog-img">
-					            <% if post.image.url %>
-					            	<img class="img-responsive" src="<%= post.image.url %>" alt="postImg">
-					  			<% else %>
-					  				<img class="img-responsive" src="vacancy.png" alt="noImg">
-					            <% end %> 
-				         	</div>
-					         <div class="blog-content">
-					  			<div class="blog-title">
-					  				<h3><%= link_to post.title, post %></h3>
-					  			</div>
-					  			<p><%= post.content %></p>
-					           
+<div id="blog" class="section md-padding bg-white">
+	<!-- Container -->
+	<div class="container" id="post-body">
+		<!-- Row -->
+		<div class="row">
+			<!-- Section header -->
+			<div class="section-header text-center col-md-12">
+				<h2 class="title">Blog</h2>
+			</div>
+			<!-- /Section header -->
+			<!-- blog -->
+	          <% @posts.each do |post| %>
+	          <div class="col-lg-4 col-md-6 col-sm-12">
+	  		  	<div class="blog-card">
+	  		  		<div class="blog-box">
+			  			<div class="blog-img">
+				            <% if post.image.url %>
+				            	<img class="img-responsive" src="<%= post.image.url %>" alt="postImg">
+				            <% end %> 
+			         	</div>
+				         <div class="blog-content">
+				  			<div class="blog-title">
+				  				<h3><%= link_to post.title, post %></h3>
+				  			</div>
+				  			<div class="blog-tags">
+		  						<% post.tag_list.each do |tag| %>
+		  							<div class="blog-tags-icon"><i class="fa fa-tag"></i><%= tag %></div>
+								<% end %>
+							</div>
+				  			<p><%= truncate post.content, length: 100 %></p>
+				           	<% if can? :update, post %>
 					            <%= link_to 'Show', post, class: "editors" %> 
 					            <%= link_to 'Edit', edit_post_path(post), class: "editors" %> 
 					            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "editors" %> 
-							 </div>
-							 
-				    	  </div>
-				  	    </div>
-				  	 </div>
-		      		<% end %>      
-		  		</div>
-	  		<%= paginate @posts %>
-	  		<%= link_to '글 작성하기', new_post_path %>
-  			</div>
-		</div>      		
-	<br>
-	
-	<%= render 'footer' %>
+						 	<% end %>
+					 </div>
+			       </div>
+			     </div>
+			   </div>
+	      	<% end %>      
+	  		</div>
+  		<%= paginate @posts %>
+  		<% if user_signed_in? %>
+  			<%= link_to '글 작성하기', new_post_path %>
+  			<%= link_to "로그아웃", destroy_user_session_path, method: :get %>
+  		<% end %>
+  		</div>
+	</div>      		
+<br>
+<%= render 'footer' %>

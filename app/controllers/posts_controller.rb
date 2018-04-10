@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
   # GET /posts
   # GET /posts.json
+  def moqa
+  end
+  
   def index
-    @posts = Post.order(:id).page(params[:page]).per(9)
+    @posts = Post.order(:id).page(params[:page]).per(9).reverse_order
     
   end
 
@@ -16,10 +18,12 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    authorize! :create, @post
   end
 
   # GET /posts/1/edit
   def edit
+    authorize! :update, @post
   end
 
   # POST /posts
@@ -70,6 +74,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:name, :title, :content, :image)
+      params.require(:post).permit(:name, :title, :content, :tag_list, :image)
     end
 end
