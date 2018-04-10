@@ -2,7 +2,6 @@
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
       <% @post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -28,8 +27,12 @@
     <%= f.text_field :tag_list %>
   </div>
   <div class="field"> 
-    <%= f.label :썸네일 %><br>
+    <%= f.label :이미지 %><br>
     <%= f.file_field :image %>
+  </div>
+    <div class="field"> 
+    <%= f.label :파일 %><br>
+    <%= f.file_field :files %>
   </div>
   <div class="actions">
     <%= f.submit %>

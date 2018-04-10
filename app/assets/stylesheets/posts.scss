@@ -337,7 +337,7 @@ header {
     margin-top: 0px;
     margin: 0 auto 30px;
     width: 300px;
-    height: 400px;
+    height: 500px;
     border-bottom: 1px solid #ccc;
 }
 .blog-box{
@@ -422,7 +422,66 @@ header {
 .pagination > span > a{
     color: #959595 !important;
 }
+/* -- File Download -- */ 
 
+.file_download-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 1;
+    flex-basis: 1;
+}
+
+.file_download-btn a {
+    border: 1px solid #ddd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 12px 10px;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.file_download-btn.active a,
+.file_download-btn a:hover {
+    border-color: transparent;
+    background-color: #42c9a9;
+    text-decoration: none;
+}
+.file_download-btn a img {
+    color: #ffffff;
+    margin-left: 3px;
+    margin-right: 1px;
+    padding-left: 1px;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+.file_download-btn a span{
+    font-size: 16px;
+}
+
+.file_download-btn a:hover i,
+.file_download-btn.active a i,
+.file_download-btn.active a p,
+.file_download-btn a:hover span {
+    color: #fff;
+}
 /* -- blog tags -- */
 
 .blog-tags-icon {
