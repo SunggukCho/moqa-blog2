@@ -35,12 +35,12 @@
 						<div class="blog-tags">
   						<span>Tags :</span>
 	  						<% @post.tag_list.each do |tag| %>
-	  							<div class="blog-tags-icon"><i class="fa fa-tag"></i><%= tag %></div>
+	  							<div class="blog-tags-icon"><i class="fa fa-tag"></i>&nbsp;<%= tag %></div>
 							<% end %>
 						</div>
 						<!-- blog tags -->
 						<!--List, edit, destroy-->
-					<br>
+
 						<div class="blog-tags-plus">
 						  <%= link_to '목록으로', posts_path %>
 						<% if can? :update, @post %>  
@@ -48,9 +48,8 @@
 			              <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %> 
 						<% end %>
 						</div>
-
 					<br>
-            		<p id="notice"><%= notice %></p>
+            		<!--<p id="notice"><%= notice %></p>-->
 					<!--Disqus 댓글-->
 					<div id="disqus_thread"></div>
 			<script>

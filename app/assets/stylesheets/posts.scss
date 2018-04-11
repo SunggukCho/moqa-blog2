@@ -319,8 +319,6 @@ header {
 .breadcrumb>li+li:before {
     color: #868F9B;
 }
-
-
 /*------------------------------------*\
 	Blog
 \*------------------------------------*/
@@ -336,69 +334,49 @@ header {
 .blog-card{
     margin-top: 0px;
     margin: 0 auto 30px;
-    width: 300px;
-    height: 500px;
-    border-bottom: 1px solid #ccc;
+    width: 320px;
+    height: 450px;
+    box-shadow: 0px 7px 10px 1px  rgba(0, 0, 0, 0.04);
+     -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+.blog-card:hover{
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
 }
 .blog-box{
     background-color: #FFF;
 }
 .blog-img{
-    width: 300px;
-    height: 200px;
+    width: 320px;
+    height: 215px;
     display: flex;
 }
-.blog > .blog-content {
-    padding: 20px 20px 40px 20px;
+.blog-img a{
+    text-align: center;
+    margin: 0 auto;
 }
-
+.blog-content {
+    padding: 10px 10px 10px 10px;
+}
 .blog-content-post{
     padding: 20px 20px 40px;
 }
 .blog > .card{
     border: none !important;
 }
-
 .blog > .blog-box > .blog-content > a{
     color: #959595 !important;
     display: flex;
 }
 .blog-box > .blog-content > .blog-title{
-    // margin-top: 10px;
-    font-size: 21px !important;
-    margin-top: 10px;
-}
-.blog-box > .blog-content> .blog-title:hover{
-    font-size: 21px;
-    color: #007bff;
-}
-
-.blog .blog-meta {
-    margin-bottom: 20px;
-}
-
-.blog .blog-meta li {
-    display: inline-block;
-    font-size: 14px;
-    color: #10161A;
-    margin-right: 10px;
-}
-
-.blog .blog-meta li i {
-    color: #6195FF;
-    margin-right: 5px;
+    font-size: 20px !important;
+    margin-bottom: 10px;
 }
 .img-responsive{
-  max-width: 100%;
-  justify-content: center
-}
-// 
-#main .blog .blog-content {
-  padding: 20px 0px 0px;
-}
-
-#main .blog {
-  margin-top: 0px;
+    max-width: 100%;
+    justify-content: center
 }
 
 /*------------------------------------*\
@@ -422,6 +400,25 @@ header {
 .pagination > span > a{
     color: #959595 !important;
 }
+/* button-center: Write/ Sign-out */
+.button-center{
+    text-align: center;
+}
+.button-center a{
+    margin: 10px auto;
+    display: inline-block;
+    padding: 6px 13px;
+    font-size: 14px;
+    margin: 2px 0px;
+    background: #F4F4F4;
+    color: #10161A;
+}
+.button-center a:hover{
+  color: #FFF !important;
+  background-color: #6195FF;
+  text-decoration: none;
+}
+
 /* -- File Download -- */ 
 
 .file_download-area {
@@ -483,7 +480,9 @@ header {
     color: #fff;
 }
 /* -- blog tags -- */
-
+.blog-tags{
+    margin-bottom: 10px;
+}
 .blog-tags-icon {
     margin: 10px 0px;
     display: inline-block;
@@ -495,15 +494,15 @@ header {
 }
 .blog-tags-plus{
     margin-top: 30px;
-
+    display: flex;
+    justify-content: flex-end;
 }
 .blog-tags-plus a{
     display: inline-block;
-    padding: 3px 6px;
+    padding: 6px 13px;
     font-size: 14px;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     color: #726a84 !important;
-    border-radius: 3px;
     -webkit-transition: 0.2s opacity;
     transition: 0.2s opacity;
 }
@@ -852,21 +851,16 @@ header {
 
 /* -- nav -- */
 nav a{
-    color: #fff !important;
+    color: #212121 !important;
 }
 
 .navbar-brand {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: 700;
-    color: #fff !important;
+    color: #42c9a9 !important;
     margin: 0;
     line-height: 1;
     padding: 0;
-}
-
-.navbar-brand:hover,
-.navbar-brand:focus {
-    color: #42c9a9 !important;
 }
 
 #nav .nav-link {
@@ -882,23 +876,28 @@ nav a{
 }
 nav ul li{
     margin-right: 1em;
+    color: #212121;
 }
 nav ul li > a:hover {
-    color: #ccc !important;
-    font-size: 130% !important;
-    text-decoration: underline !important;
+    font-size: 110% !important;
 }
-.navbar-toggler{
-    border: transparent;
+.navbar-toggle{
+    margin-right: 23px !important;
+}
+.navbar-toggle .icon-bar{
+    border: 1px solid #ccc !important;
 }
 .navbar {
     display: flex !important;
     margin-bottom: 0 !important;
-    border-bottom: 1px solid #ccc !important;
+    // border-bottom: 1px solid #ccc !important;
     border-radius: 0 !important;
 }
 .navbar-nav{
     flex-direction: row !important;
+}
+.navbar-collapse{
+    border-bottom: 1px solid #eaeaea;
 }
 
 /*------------------------------------*\
