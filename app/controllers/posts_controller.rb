@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
   
   def index
-    @posts = Post.order(:id).page(params[:page]).per(9).reverse_order
+    @posts = Post.order(:id).page(params[:page]).per(3).reverse_order
     
   end
 

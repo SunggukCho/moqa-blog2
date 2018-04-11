@@ -1,57 +1,57 @@
 <%= render 'navbar' %>
 <div id="blog" class="section md-padding">
-		<!-- Container -->
-		<div class="container">
-			<!-- Row -->
-			<div class="row">
-				<!-- Main -->
-				<main id="main" class="col-md-10">
-					<div class="blog">
-						<h2><%= @post.title %></h2>
-						<h5><%= @post.created_at %></h5>
-					  <div class="card post" data-post-id="<%= @post.id %>"> 
-			              <div class="card-image">
-			               <% if @post.image.url %> 
-			                 <img src="<%= @post.image.url %>" /> 
-			               <% end %> 
-			              </div>
-						</div>
-						<div class="blog-content-post">
-							<p><%= @post.content %></p>
-						</div>
-						
-						<!--File download Area-->
-                        <div class="file_download-area">
-                            <div class="file_download-btn wow fadeInUp" data-wow-delay="0.2s">
-								<% if @post.files.url %>
-									<a href="<%= @post.files.url %>">
-										<i class="fa fa-download"></i>&nbsp;<span>리포트 다운로드</span>
-									</a>
-								<% end %>
-							</div>
-						</div>
-						
-						<!-- blog tags -->
-						<div class="blog-tags">
-  						<span>Tags :</span>
-	  						<% @post.tag_list.each do |tag| %>
-	  							<div class="blog-tags-icon"><i class="fa fa-tag"></i>&nbsp;<%= tag %></div>
+	<!-- Container -->
+	<div class="container">
+		<!-- Row -->
+		<div class="row">
+			<!-- Main -->
+			<main id="main" class="col-md-10">
+				<div class="blog">
+					<h2><%= @post.title %></h2>
+					<h5><%= @post.created_at.to_date %></h5>
+				  <div class="card post" data-post-id="<%= @post.id %>"> 
+		              <div class="card-image">
+		               <% if @post.image.url %> 
+		                 <img src="<%= @post.image.url %>" /> 
+		               <% end %> 
+		              </div>
+					</div>
+					<div class="blog-content-post">
+						<p><%= @post.content %></p>
+					</div>
+					
+					<!--File download Area-->
+                    <div class="file_download-area">
+                        <div class="file_download-btn wow fadeInUp" data-wow-delay="0.2s">
+							<% if @post.files.url %>
+								<a href="<%= @post.files.url %>">
+									<i class="fa fa-download"></i>&nbsp;<span>리포트 다운로드</span>
+								</a>
 							<% end %>
 						</div>
-						<!-- blog tags -->
-						<!--List, edit, destroy-->
-
-						<div class="blog-tags-plus">
-						  <%= link_to '목록으로', posts_path %>
-						<% if can? :update, @post %>  
-			              <%= link_to 'Edit', edit_post_path(@post) %> 
-			              <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %> 
+					</div>
+					
+					<!-- blog tags -->
+					<div class="blog-tags">
+  					<span>Tags :</span>
+  						<% @post.tag_list.each do |tag| %>
+  							<div class="blog-tags-icon"><i class="fa fa-tag"></i>&nbsp;<%= tag %></div>
 						<% end %>
-						</div>
-					<br>
-            		<!--<p id="notice"><%= notice %></p>-->
-					<!--Disqus 댓글-->
-					<div id="disqus_thread"></div>
+					</div>
+					<!-- blog tags -->
+					<!--List, edit, destroy-->
+
+					<div class="blog-tags-plus">
+					  <%= link_to '목록으로', posts_path %>
+					<% if can? :update, @post %>  
+		              <%= link_to 'Edit', edit_post_path(@post) %> 
+		              <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %> 
+					<% end %>
+					</div>
+				<br>
+        		<!--<p id="notice"><%= notice %></p>-->
+				<!--Disqus 댓글-->
+				<div id="disqus_thread"></div>
 			<script>
 			
 			/**
