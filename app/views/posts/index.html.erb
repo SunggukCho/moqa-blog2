@@ -6,7 +6,7 @@
 		<div class="row">
 			<!-- Section header -->
 			<div class="section-header text-center col-md-12">
-				
+
 			</div>
 			<!-- /Section header -->
 			<!-- blog -->
@@ -23,19 +23,21 @@
 				  			<div class="blog-title">
 				  				<%= link_to post.title, post %>
 				  			</div>
+				  			<% if post.summary %>
+				  				<p><%= raw post.summary.truncate(50) %></p>
+				  			<% end %>
 				  			<div class="blog-tags">
 		  						<% post.tag_list.each do |tag| %>
 		  							<div class="blog-tags-icon"><i class="fa fa-tag"></i>&nbsp;<%= tag %></div>
 								<% end %>
 							</div>
-				  			<p><%= truncate post.content, length: 100 %></p>
 					 	</div>
 					 	<div class="blog-tags-plus">
-					           	<% if can? :update, post %>
-						            <%= link_to 'Show', post, class: "editors" %> 
-						            <%= link_to 'Edit', edit_post_path(post), class: "editors" %> 
-						            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "editors" %> 
-							 	<% end %>
+				           	<% if can? :update, post %>
+					            <%= link_to 'Show', post, class: "editors" %> 
+					            <%= link_to 'Edit', edit_post_path(post), class: "editors" %> 
+					            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "editors" %> 
+						 	<% end %>
 						</div>
 			       </div>
 			     </div>

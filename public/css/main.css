@@ -6,6 +6,7 @@
 /* =================================== */
 /*  Basic Style 
 /* =================================== */
+
 ::-moz-selection {
   /* Code for Firefox */
   background-color: #8460f6;
@@ -51,7 +52,6 @@
 
 body {
   color: #777777;
-  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.5em;
@@ -121,7 +121,6 @@ a, a:focus, a:hover {
 
 h1, h2, h3,
 h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
   color: #222222;
   line-height: 1.5em;
   margin-bottom: 0;
@@ -133,7 +132,6 @@ h4, h5, h6 {
 .h4, .h5, .h6 {
   margin-bottom: 0;
   margin-top: 0;
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #222222;
 }

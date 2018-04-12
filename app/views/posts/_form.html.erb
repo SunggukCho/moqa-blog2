@@ -1,3 +1,5 @@
+<%= javascript_include_tag Ckeditor.cdn_url %>
+
 <%= form_for @post, html: { multipart: true } do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -15,21 +17,28 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :요약 %><br>
+    <%= f.text_field :summary %>
+  </div>  
+  <div class="field">
     <%= f.label :내용 %><br>
-    <%= f.form.cktext_area :content %>
+    <%= f.cktext_area :content, :class => 'ckeditor' %>
   </div>
   <div class="field">
     <%= f.label :Tags %><br>
     <%= f.text_field :tag_list %>
   </div>
+  <br>
   <div class="field"> 
     <%= f.label :이미지 %><br>
     <%= f.file_field :image %>
   </div>
+  <br>
     <div class="field"> 
     <%= f.label :파일 %><br>
     <%= f.file_field :files %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -38,28 +38,24 @@ Table OF Contents
 19 > Owl theme
 20 > Back to top
 21 > Preloader
-
 ------------------------------------*/
 
 /*------------------------------------*\
 	General
 \*------------------------------------*/
 
-
 /* -- typography -- */
 * {
+    
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Jeju Gothic' !important;
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
     color: #868F9B;
-}
-a {
-    
 }
 
 h1,
@@ -68,7 +64,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Cabin', sans-serif;
     font-weight: 400;
     color: #494949;
     line-height: 1.2;
@@ -349,7 +344,7 @@ header {
     transition-duration: 500ms;
 }
 .blog-card:hover{
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
 }
 .blog-box{
@@ -783,7 +778,9 @@ header {
     color: #6195FF;
     margin-right: 5px;
 }
-
+.single-footer-widget h5{
+    font-weight: 600;
+}
 
 /*------------------------------------*\
 	Responsive

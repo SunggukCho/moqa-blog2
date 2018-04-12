@@ -6,8 +6,7 @@ class PostsController < ApplicationController
   end
   
   def index
-    @posts = Post.order(:id).page(params[:page]).per(3).reverse_order
-    
+    @posts = Post.order(:id).page(params[:page]).per(9).reverse_order
   end
 
   # GET /posts/1
@@ -74,6 +73,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :tag_list, :image, :files)
+      params.require(:post).permit(:title, :summary, :content, :tag_list, :image, :files)
     end
 end
