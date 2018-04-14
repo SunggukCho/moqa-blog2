@@ -5,45 +5,165 @@
 		<!-- Row -->
 		<div class="row">
 			<!-- Section header -->
-			<div class="section-header text-center col-md-12">
-
+			<div class="row">
+				<div class="section-header text-center">
+					<%= render 'pills' %>
+				</div>
 			</div>
 			<!-- /Section header -->
-			<!-- blog -->
-	          <% @posts.each do |post| %>
-	          <div class="col-lg-4 col-md-6 col-sm-12">
-	  		  	<div class="blog-card">
-	  		  		<div class="blog-box">
-			  			<div class="blog-img">
-				            <% if post.image.url(:thumb) %>
-				            	<%= link_to image_tag(post.image.url(:thumb)), post %>
-				            <% end %> 
-			         	</div>
-				         <div class="blog-content">
-				  			<div class="blog-title">
-				  				<%= link_to post.title, post %>
-				  			</div>
-				  			<% if post.summary %>
-				  				<p><%= raw post.summary.truncate(50) %></p>
-				  			<% end %>
-				  			<div class="blog-tags">
-		  						<% post.tag_list.each do |tag| %>
-		  							<div class="blog-tags-icon"><i class="fa fa-tag"></i>&nbsp;<%= tag %></div>
-								<% end %>
+			
+		<!-- blog -->
+			<!--Tab-Total-->
+			<div class="tab-content">
+   			 <div id="total" class="container tab-pane active"><br>
+		          <% @posts.each do |post| %>
+		          <div class="col-lg-4 col-md-6 col-sm-12">
+		  		  	<div class="blog-card">
+		  		  		<div class="blog-box">
+				  			<div class="blog-img">
+					            <% if post.image.url(:thumb) %>
+					            	<%= link_to image_tag(post.image.url(:thumb)), post %>
+					            <% end %> 
+				         	</div>
+					         <div class="blog-content">
+					  			<div class="blog-title">
+					  				<%= link_to post.title, post %>
+					  			</div>
+					  			<% if post.summary %>
+					  				<p><%= raw post.summary.truncate(50) %></p>
+					  			<% end %>
+					  			<div class="blog-tags">
+			  						<% post.tag_list.each do |tag| %>
+			  							<div class="blog-tags-icon"><i class="fa fa-tag"></i>&nbsp;<%= tag %></div>
+									<% end %>
+								</div>
+						 	</div>
+						 	<div class="blog-tags-plus">
+					           	<% if can? :update, post %>
+						            <%= link_to 'Show', post, class: "editors" %> 
+						            <%= link_to 'Edit', edit_post_path(post), class: "editors" %> 
+						            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "editors" %> 
+							 	<% end %>
 							</div>
-					 	</div>
-					 	<div class="blog-tags-plus">
-				           	<% if can? :update, post %>
-					            <%= link_to 'Show', post, class: "editors" %> 
-					            <%= link_to 'Edit', edit_post_path(post), class: "editors" %> 
-					            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "editors" %> 
-						 	<% end %>
-						</div>
-			       </div>
-			     </div>
-			   </div>
-	      	<% end %>      
-	  		</div>
+				       </div>
+				     </div>
+				   </div>
+		      	<% end %>      
+			     </div><!--tab-total-->
+			    <!--Tab-total-->
+		      	<!--Tab-News-->
+		      	
+				<div id="news" class="container tab-pane"><br>
+		          <% @posts_news.each do |post| %>
+		          <div class="col-lg-4 col-md-6 col-sm-12">
+		  		  	<div class="blog-card">
+		  		  		<div class="blog-box">
+				  			<div class="blog-img">
+					            <% if post.image.url(:thumb) %>
+					            	<%= link_to image_tag(post.image.url(:thumb)), post %>
+					            <% end %> 
+				         	</div>
+					         <div class="blog-content">
+					  			<div class="blog-title">
+					  				<%= link_to post.title, post %>
+					  			</div>
+					  			<% if post.summary %>
+					  				<p><%= raw post.summary.truncate(50) %></p>
+					  			<% end %>
+					  			<div class="blog-tags">
+			  						<% post.tag_list.each do |tag| %>
+			  							<div class="blog-tags-icon"><i class="fa fa-tag"></i>&nbsp;<%= tag %></div>
+									<% end %>
+								</div>
+						 	</div>
+						 	<div class="blog-tags-plus">
+					           	<% if can? :update, post %>
+						            <%= link_to 'Show', post, class: "editors" %> 
+						            <%= link_to 'Edit', edit_post_path(post), class: "editors" %> 
+						            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "editors" %> 
+							 	<% end %>
+							</div>
+				       </div>
+				     </div>
+				   </div>
+		      	<% end %>      
+			     </div><!--tab-news-->
+		      	<!--Tab-News-->	
+		      	<!--Tab-event-->	
+      			<div id="event" class="container tab-pane fade"><br>
+		          <% @posts_event.each do |post| %>
+		          <div class="col-lg-4 col-md-6 col-sm-12">
+		  		  	<div class="blog-card">
+		  		  		<div class="blog-box">
+				  			<div class="blog-img">
+					            <% if post.image.url(:thumb) %>
+					            	<%= link_to image_tag(post.image.url(:thumb)), post %>
+					            <% end %> 
+				         	</div>
+					         <div class="blog-content">
+					  			<div class="blog-title">
+					  				<%= link_to post.title, post %>
+					  			</div>
+					  			<% if post.summary %>
+					  				<p><%= raw post.summary.truncate(50) %></p>
+					  			<% end %>
+					  			<div class="blog-tags">
+			  						<% post.tag_list.each do |tag| %>
+			  							<div class="blog-tags-icon"><i class="fa fa-tag"></i>&nbsp;<%= tag %></div>
+									<% end %>
+								</div>
+						 	</div>
+						 	<div class="blog-tags-plus">
+					           	<% if can? :update, post %>
+						            <%= link_to 'Show', post, class: "editors" %> 
+						            <%= link_to 'Edit', edit_post_path(post), class: "editors" %> 
+						            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "editors" %> 
+							 	<% end %>
+							</div>
+				       </div>
+				     </div>
+				   </div>
+		      	<% end %>      
+			     </div>	 <!--tab-event-->	
+ 		      	<!--Tab-report-->
+      			<div id="report" class="container tab-pane fade"><br>
+		          <% @posts_report.each do |post| %>
+		          <div class="col-lg-4 col-md-6 col-sm-12">
+		  		  	<div class="blog-card">
+		  		  		<div class="blog-box">
+				  			<div class="blog-img">
+					            <% if post.image.url(:thumb) %>
+					            	<%= link_to image_tag(post.image.url(:thumb)), post %>
+					            <% end %> 
+				         	</div>
+					         <div class="blog-content">
+					  			<div class="blog-title">
+					  				<%= link_to post.title, post %>
+					  			</div>
+					  			<% if post.summary %>
+					  				<p><%= raw post.summary.truncate(50) %></p>
+					  			<% end %>
+					  			<div class="blog-tags">
+			  						<% post.tag_list.each do |tag| %>
+			  							<div class="blog-tags-icon"><i class="fa fa-tag"></i>&nbsp;<%= tag %></div>
+									<% end %>
+								</div>
+						 	</div>
+						 	<div class="blog-tags-plus">
+					           	<% if can? :update, post %>
+						            <%= link_to 'Show', post, class: "editors" %> 
+						            <%= link_to 'Edit', edit_post_path(post), class: "editors" %> 
+						            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "editors" %> 
+							 	<% end %>
+							</div>
+				       </div>
+				     </div>
+				   </div>
+		      	<% end %>      
+			     </div>	<!--Tab-report-->  	
+		      	<!--Tab-report-->
+	      	 </div> <!--tab-content-->	
+	  		</div><!--row-->
   		<%= paginate @posts %>
 	  		<div class="button-center">
 		  		<% if user_signed_in? %>

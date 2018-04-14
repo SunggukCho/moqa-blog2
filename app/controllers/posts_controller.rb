@@ -7,6 +7,9 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.order(:id).page(params[:page]).per(9).reverse_order
+    @posts_news = @posts.where(category_id: 1)
+    @posts_event = @posts.where(category_id: 2)
+    @posts_report = @posts.where(category_id: 3)
   end
 
   # GET /posts/1
@@ -17,6 +20,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    @categories = Category.all
     authorize! :create, @post
   end
 
@@ -73,6 +77,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :summary, :content, :tag_list, :image, :files)
+      params.require(:post).permit(:title, :summary, :content, :tag_list, :image, :files, :category_id)
     end
 end

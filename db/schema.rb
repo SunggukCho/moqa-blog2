@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411091749) do
+ActiveRecord::Schema.define(version: 20180414081542) do
+
+  create_table "categories", force: :cascade do |t|
+    t.integer  "category_id"
+    t.string   "name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -27,14 +34,15 @@ ActiveRecord::Schema.define(version: 20180411091749) do
   add_index "ckeditor_assets", ["type"], name: "index_ckeditor_assets_on_type"
 
   create_table "posts", force: :cascade do |t|
+    t.integer  "category_id"
     t.string   "title"
     t.text     "content"
     t.string   "summary"
     t.text     "tag_list"
     t.string   "image"
     t.string   "files"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "roles", force: :cascade do |t|

@@ -93,13 +93,12 @@ a,
 a:hover,
 a:focus,
 a:active {
-    // color: #007bff !important;
+    color: #777777 !important;
     text-decoration: none;
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms;
 }
-
 .main-color {
     color: #6195FF;
 }
@@ -184,13 +183,11 @@ ul, ol {
 
 .section-header {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
-
 .section-header .title {
     text-transform: capitalize;
 }
-
 .title:after {
     content:"";
   	display:block;
@@ -861,9 +858,8 @@ header {
 
 /* -- nav -- */
 nav a{
-    color: #212121 !important;
+    color: #b2b2b2 !important;
 }
-
 .navbar-brand {
     font-size: 60px;
     font-weight: 700;
@@ -888,8 +884,8 @@ nav ul li{
     margin-right: 1em;
     color: #212121;
 }
-nav ul li > a:hover {
-    font-size: 110% !important;
+nav ul li > a.active {
+    text-decoration: underline;    
 }
 .navbar-toggle{
     margin-right: 23px !important;
@@ -900,7 +896,6 @@ nav ul li > a:hover {
 .navbar {
     display: flex !important;
     margin-bottom: 0 !important;
-    // border-bottom: 1px solid #ccc !important;
     border-radius: 0 !important;
 }
 .navbar-nav{
@@ -908,6 +903,32 @@ nav ul li > a:hover {
 }
 .navbar-collapse{
     border-bottom: 1px solid #eaeaea;
+}
+/*------------------------------------*\
+	Nav-pills
+\*------------------------------------*/
+.nav-pills {
+    display: flex;
+    justify-content: center;
+}
+.nav-pills .nav-item {
+    font-size: 16px;
+}
+.nav-pills div{
+    border-bottom: 1px solid #eaeaea;
+}
+.nav>li>a:hover{
+    background-color: transparent !important;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    background-color: transparent !important;
+    color: #b2b2b2 !important;
+}
+.nav-pills>li.active>a div,
+.nav-pills>li.active>a:active div,
+.nav-pills>li.active>a:focus div{
+    border-bottom: 1.5px solid #42c9a9;
+    height: 100%;
 }
 
 /*------------------------------------*\

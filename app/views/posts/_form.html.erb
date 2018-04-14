@@ -11,14 +11,18 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :카테고리 %><br>
+    <%= f.select :category_id, options_from_collection_for_select(@categories, "id", "name") %>
+  </div>
+  <br>
   <div class="field">
     <%= f.label :제목 %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: "제목을 입력해주세요" %>
   </div>
   <div class="field">
     <%= f.label :요약 %><br>
-    <%= f.text_field :summary %>
+    <%= f.text_field :summary, placeholder: "내용 요약: 출처, 작성자, 날짜 등" %>
   </div>  
   <div class="field">
     <%= f.label :내용 %><br>
@@ -26,7 +30,7 @@
   </div>
   <div class="field">
     <%= f.label :Tags %><br>
-    <%= f.text_field :tag_list %>
+    <%= f.text_field :tag_list, placeholder: "쉼표(콤마)로 구분" %>
   </div>
   <br>
   <div class="field"> 
