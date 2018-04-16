@@ -1,492 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109145159-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  ga('require', 'displayfeatures');
+	  gtag('config', 'UA-109145159-1');
+	</script>
 
-    <!-- Title -->
-    <title>모카! 모두의 QnA</title>
+	<meta charset="utf-8">
+	<title>inDataLAB - Data Driven Insight</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/moqa-favicon.png">
-
-    <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <!-- Responsive CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
-    <!-- CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<!--owl carousel-->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+<!--owl end-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/et-line-font.css">
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="/images/x-icon/idl_pavicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/images/x-icon/idl_pavicon.ico" type="image/x-icon" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 </head>
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
-<body>
-    <!-- Preloader Start -->
-    <div id="preloader">
-        <div class="colorlib-load"></div>
+<!-- preloader section -->
+<div class="preloader">
+	<div class="sk-spinner sk-spinner-circle">
+       <div class="sk-circle1 sk-circle"></div>
+       <div class="sk-circle2 sk-circle"></div>
+       <div class="sk-circle3 sk-circle"></div>
+       <div class="sk-circle4 sk-circle"></div>
+       <div class="sk-circle5 sk-circle"></div>
+       <div class="sk-circle6 sk-circle"></div>
+       <div class="sk-circle7 sk-circle"></div>
+       <div class="sk-circle8 sk-circle"></div>
+       <div class="sk-circle9 sk-circle"></div>
+       <div class="sk-circle10 sk-circle"></div>
+       <div class="sk-circle11 sk-circle"></div>
+       <div class="sk-circle12 sk-circle"></div>
     </div>
+</div>
 
-    <!-- ***** Header Area Start ***** -->
-    <header class="header_area animated">
-        <div class="container-fluid">
-            <div class="row align-items-center justify-content-around">
-                <!-- Menu Area Start -->
-                <div class="col-xl-11 col-lg-11 col-md-9">
-                    <div class="menu_area">
-                        <nav class="navbar navbar-expand-md navbar-light d-flex flex-row">
-                            <!-- Logo -->
-                            <a href="#" class="navbar-brand" href="http://moqa.co.kr"><img src="img/core-img/MOQA_newLogo_white@4x.png" alt="moqa-brand-logo"/></a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                            <!-- Menu Area -->
-                            <div class="collapse navbar-collapse" id="ca-navbar">
-                                <ul class="navbar-nav ml-auto" id="nav">
-                                    <li class="nav-item active"><a class="nav-link" href="#">Business</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#contact">Survey</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <!-- Signup btn -->
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-
-    <!-- ***** Wellcome Area Start ***** -->
-    <section class="wellcome_area clearfix" id="home">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-md-12 wellcome_mobile">
-                    <div class="wellcome-heading">
-                        <h2>쉽게 묻고<br>쉽게 답한다</h2>
-                        <h3></h3>
-                        <p>모두의 Q&A 플랫폼</p>
-                    </div>
-                    <div class="get-start-area">
-                        <div class="app-download-area">
-                            <div class="app-download-btn wow fadeInUp" data-wow-delay="0.2s">
-                                <!-- Google Store Btn -->
-                                <a href="#">
-                                    <!-- <i class="fa fa-android"></i>
-                                    <p class="mb-0"><span>available on</span> Google Store</p> -->
-                                    <img src="img/core-img/googleplay-icon.png" alt="">
-                                </a>
-                            </div>
-                            <div class="app-download-btn wow fadeInDown" data-wow-delay="0.4s">
-                                <!-- Apple Store Btn -->
-                                <a href="#">
-                                    <i class="fa fa-apple"></i>
-                                    <!-- <p class="mb-0"><span>available on</span> Apple Store</p> -->
-                                </a>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Welcome thumb -->
-        <!-- 폰이미지 넣는 곳  -->
-
-        <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s">
-            <img src="img/bg-img/moqa-main-img.png" alt="">
-        </div>
-
-    </section>
-    <!-- ***** Wellcome Area End ***** -->
-
-<!-- ***** Special Area Start ***** -->
-<section class="special-area bg-white section_padding_50" id="about">
-    <!-- Special Description Area -->
-    <div class="special_description_area mt-50">
-        <div class="container">
-            <div class="row d-flex justify-content-around">
-                <div class="col-lg-6 col-xl-5 col-sm-12 carousel-frame d-flex justify-content-center">
-                    <div class="carousel-outer">
-                        <div class="special_description_img">
-                          <div id="carousel_1" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                  <img src="img/carousel-img/1-1.png" alt="1-1">
-                                </div>
-                                <div class="item">
-                                  <img src="img/carousel-img/1-2.png" alt="1-2">
-                                </div>
-                                <div class="item">
-                                  <img src="img/carousel-img/1-3.png" alt="1-3">
-                                </div>
-                              </div> 
-                              <a href="#carousel_1" data-slide="next"><img class="carousel-frame-img" src="img/bg-img/phoneFrame.png"/></a>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-5 col-sm-12 d-flex justify-content-center align-items-end">
-                    <div class="special_description_content">
-                        <h2>잠금화면에서 간편하게 즐기는 모바일 설문!</h2>
-                        <p>다른 사람들은 어떤 고민을 하고 있을까요?</p>
-                        <p>일상 속에서 사람들의 고민을 들어주세요</p>
-                        <p>터치 한 번으로 고민을 해결하고 포인트 획득까지!</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ***** Special Area End ***** -->
-
-<!-- ***** Special Area2 Start ***** -->
-<section class="special-area bg-light section_padding_100" id="about2">
-    <!-- Special Description Area -->
-    <div class="special_description_area">
-        <div class="container">
-            <div class="row d-flex justify-content-around ">
-                <div class="col-lg-6 col-xl-5 d-flex justify-content-start align-items-end">
-                    <div class="special_description_content">
-                        <h2>궁금해, 뭐가? <br>물어봐, 모카!</h2>
-                        <p>고민이 있으세요?</p>
-                        <p>무엇이든 물어보세요!</p>
-                        <p>모카가 당신의 궁금증을 해결해 드립니다</p>
-
-                    </div>
-                </div>
-                  <div class="col-lg-6 carousel-frame">
-                    <div class="carousel-outer">
-                        <div class="special_description_img">
-                          <div id="carousel_2" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel_2" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel_2" data-slide-to="1" class=""></li>
-                                <li data-target="#carousel_2" data-slide-to="2" class=""></li>
-                            </ol>
-                              <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                  <img src="img/carousel-img/2-1.png" alt="">
-                                </div>
-                                <div class="item">
-                                  <img src="img/carousel-img/2-2.png" alt="">
-                                </div>
-                                <div class="item">
-                                  <img src="img/carousel-img/2-3.png" alt="">
-                                </div>
-                              </div>
-                              <a href="#carousel_2" data-slide="next"><img class="carousel-frame-img" src="img/bg-img/phoneFrame.png"/></a>
-
-<!--                                 <a class="left carousel-control" href="#carousel_2" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                                <a class="right carousel-control" href="#carousel_2" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
-
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ***** Special Area2 End ***** -->
-
-<!-- ***** Special Area3 Area Start ***** -->
-<section class="special-area bg-white section_padding_100" id="about3">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-               <!-- Contents -->
-    <div class="special_description_area">
-        <div class="container">
-            <div class="row row d-flex justify-content-around">
-                <div class="col-lg-6 carousel-frame">
-                    <div class="carousel-outer">
-                        <div class="special_description_img">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel_3" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel_3" data-slide-to="1" class=""></li>
-                                <li data-target="#carousel_3" data-slide-to="2" class=""></li>
-                            </ol>
-                          <div id="carousel_3" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                  <img src="img/carousel-img/3-1.png" alt="3-1">
-                                </div>
-                                <div class="item">
-                                  <img src="img/carousel-img/3-2.png" alt="3-2">
-                                </div>
-                                <div class="item">
-                                  <img src="img/carousel-img/3-3.png" alt="3-3">
-                                </div>
-                              </div>
-                              <a href="#carousel_3" data-slide="next"><img class="carousel-frame-img" src="img/bg-img/phoneFrame.png"/></a>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-5 d-flex justify-content-around align-items-end">
-                    <div class="special_description_content">
-                        <h2>누를 때마다 쌓이는 모카 포인트!</h2>
-                        <h4> 모카포인트로 카페모카 한 잔 어떠세요?</h4>
-                        <p>포인트를 스타벅스, 파리바게트 등 다양한 제휴처에서 사용해보세요!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- navigation section -->
+<section class="navbar navbar-fixed-top custom-navbar" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#home" class="smoothScroll logo-wrapper" ><img src="images/logo_bold.png" style="height:40px margin:10px 0 "> </a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#home" class="smoothScroll">HOME</a></li>
+				<li><a href="#work" class="smoothScroll">COMPANY</a></li>
+				<li><a href="#about" class="smoothScroll">APPLICATION</a></li>
+				<li><a href="#team" class="smoothScroll">TEAM</a></li>
+				<li><a href="#portfolio" class="smoothScroll">PARTNERS</a></li>
+				<!--<li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li>-->
+				<!--<li><a href="#pricing" class="smoothScroll">PRICING</a></li>-->
+				<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
 </section>
 
-    <!-- ***** CTA Area Start ***** -->
-    <section class="our-monthly-membership section_padding_50 clearfix" id="partners">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <div class="membership-description">
-                        <h2>기업고객 문의하기</h2>
-                        <p>모카와 함께 지금 리서치/광고를 진행해보세요!</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="get-started-area">
-                        <div class="get-started-button wow bounceInDown" data-wow-delay="0.5s">
-                            <a href="http://in-datalab.com/#contact">문의하기</a>
-                        </div>
-                    </div>                   
-                </div> 
-            </div>
-        </div>
-    </section>
-    <!-- Partner사 List -->
-    <!-- ***** Our Team Area Start ***** -->
-    <section class="our-Team-area bg-white section_padding_100_50 clearfix" id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <!-- Heading Text  -->
-                    <div class="section-heading">
-                        <h2>Partners</h2>
-                        <div class="line-shape"></div>
-                    </div>
-                </div>
-            </div>
-        <!--  First Row   -->
-            <div class="row">
-                <div class="col-12 col-md-4 col-lg-2 col-sm-6">
-                    <div class="single-team-member">
-                        <div class="member-image d-flex align-items-center">
-                            <img src="img/team-img/logo-SBG.jpg" alt="">
-                            <div class="team-hover-effects">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-2 col-sm-6">
-                    <div class="single-team-member">
-                        <div class="member-image d-flex align-items-center">
-                            <img src="img/team-img/logo-innocean.jpg" alt="">
-                            <div class="team-hover-effects">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-4 col-lg-2 col-sm-6">
-                    <div class="single-team-member">
-                        <div class="member-image d-flex align-items-center">
-                            <img src="img/team-img/logo-GlobalResearch.jpg" alt="">
-                            <div class="team-hover-effects">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-2 col-sm-6">
-                    <div class="single-team-member">
-                        <div class="member-image d-flex align-items-center">
-                            <img src="img/team-img/logo-yakult.jpg" alt="">
-                        <div class="team-hover-effects"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-2 col-sm-6">
-                    <div class="single-team-member">
-                        <div class="member-image d-flex align-items-center">
-                            <img src="img/team-img/logo-kci.jpg" alt="">
-                            <div class="team-hover-effects">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-2 col-sm-6">
-                    <div class="single-team-member">
-                        <div class="member-image d-flex align-items-center">
-                            <img src="img/team-img/logo-AWS.jpg" alt="">
-                        <div class="team-hover-effects">
-                        </div>
-                    </div>
-                </div>
-            </div>      
-                <div class="col-12 col-md-4 col-lg-2 col-sm-6">
-                    <div class="single-team-member">
-                        <div class="member-image d-flex align-items-center">
-                            <img src="img/team-img/logo-dp.jpg" alt="">
-                        <div class="team-hover-effects">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- Second Row -->
-            <div class="row">    
+<!-- home section -->
+<section id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h3>Big Data / Marketing & Research</h3>
+				<h1>인데이터랩</h1>
+				<hr>
+				<a href="#work" class="smoothScroll btn btn-danger">회사소개</a>
+				<a href="#contact" class="smoothScroll btn btn-default">문의</a>
+			</div>
+		</div>
+	</div>		
+</section>
 
-        </div>
-    </section>
-    <!-- ***** Our Team Area End ***** -->
-<hr>
-    <!-- ***** Contact Us Area Start ***** -->
-    <section class="footer-contact-area section_padding_100 clearfix" id="contact">
-        <div class="container">
-            <div class="section-heading text-center">
-                <h2>Contact</h2>
-                <div class="line-shape"></div>
-            </div>              
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Heading Text  -->
-                    <div class="branch-heading">
-                        <h2>Seoul</h2>
-                        <div class="line-shape-contact"></div>
-                    </div>
-                    <div class="address-text">
-                        <p><span>주소:</span> 서울특별시 서초구 강남대로 311, 한화드림플러스 12F</p>
-                        <p><span>Address:</span> 311 Gangnam-daero, Seocho 2-dong, Seocho-gu, Seoul, Korea</p>
-                    </div>
-                    <div class="phone-text">
-                        <p><span>Tel:</span> +82-2-558-4218</p>
-                    </div>
-                    <div class="email-text">
-                        <p><span>Email:</span> contact@in-datalab.com</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <!-- Form Start-->
-                    <div class="contact_from">
-                  <!-- maps -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.7236968794537!2d127.03028119447178!3d37.490846119544656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca14f9353776d%3A0x48b280d65fb05cbc!2sDream+Plus+Gangnam!5e0!3m2!1sen!2skr!4v1521768685970" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <!-- Contact Japan -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Heading Text  -->
-                    <div class="branch-heading">
-                        <h2>Tokyo</h2>
-                        <div class="line-shape-contact"></div>
-                    </div>
-                    <div class="address-text">
-                        <p><span>アドレス:</span> 東京都港区南麻布三丁目２０番１号麻布グリーンテラス５階</p>
-                    </div>
-                    <div class="email-text">
-                        <p><span>Email:</span> contact@in-datalab.com</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <!-- Form Start-->
-                    <div class="contact_from">
-                <!-- maps -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1621.095486242403!2d139.73003078583406!3d35.64766623548372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b09c382e6ad%3A0xc7feb1d4fbc2bd17!2z7J2867O4IOOAkjEwNi0wMDQ3IFTFjWt5xY0tdG8sIE1pbmF0by1rdSwgTWluYW1pYXphYnUsIDMgQ2hvbWXiiJIyMOKIkjEsIOm6u-W4g-OCsOODquODvOODs-ODhuODqeOCuSDvvJXpmo4!5e0!3m2!1sko!2skr!4v1522043352724" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Contact Us Area End ***** -->
+<!-- work section -->
+<section id="work" class="section-border">
+	<div class="container">
+		<div class="col-md-12 col-sm-12">
+			<div class="section-title">
+				<strong>01</strong>
+				<h1 class="heading bold">회사소개</h1>
+				<hr>
+			</div>
+			<div class="row">
+				<img src="images/vision-clip.png" alt="vision"/>
+			</div>
+			<div class="margin">
+				<h3>인데이터랩은 기업이 필요로 하는 소비자의 생각과 의견을 가장 효과적으로 제공하고,</h3>
+				<h3>개인 사용자에게는 보상, 그 이상의 가치를 제공합니다. </h3>
+			</div>
+<!-- section row1 -->
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+					<i class="fa fa-database fa-3x" aria-hidden="true"></i>
+					<!--<i class="icon-cloud medium-icon"></i>-->
+						<h3>Big Data</h3>
+						<hr>
+						<p>빅데이터 시대가 도래함에 따라 많은 영역에서 데이터에 대한 수요는 기하급수적으로 증가하고 있습니다.</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
+					<img src="images/mlicon_black.png" alt="machine learning icon"/>
+						<h3>Marketing</h3>
+						<hr>
+						<p>경쟁자들 보다 앞서나가기 위해서는 소비자의 니즈를 정확히 파악해야 합니다.</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="1s">
+					<i class="fa fa-cogs fa-3x" aria-hidden="true"></i>
+						<h3>Research</h3>
+						<hr>
+						<p>인데이터랩은 새로운 모바일 플랫폼 MOQA를 통해 리서치 시장에 새로운 방향을 제시합니다.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-<!--Footer-->
-    <!-- Strat Footer Area -->
-    <footer class="section-gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-footer-widget">
-                        <h5 class="text-white text-uppercase mb-20">MOQA</h5>
-                        <div class="line-shape-white"></div>
-                        <ul class="footer-nav">
-                            <li><a href="http://moqa.co.kr">App 소개</a></li>
-                            <li><a href="#">회사소개</a></li>
-                            <li><a href="http://in-datalab.com/privacy.html">개인정보처리방침</a></li>
-                            <li><a href="http://in-datalab.com/userAgreement.html">이용약관</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-footer-widget">
-                        <h5 class="text-white text-uppercase mb-20">Research</h5>
-                        <div class="line-shape-white"></div>
-                        <ul class="footer-nav">
-                            <li><a href="#">리서치</a></li>
-                        </ul>
-                    </div>
-                </div>                
-                <div class="col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-footer-widget">
-                        <h5 class="text-white text-uppercase mb-20">Survey</h5>
-                        <div class="line-shape-white"></div>
-                        <ul class="footer-nav">
-                            <li><a href="#">설문만들기</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-footer-widget">
-                        <h5 class="text-white text-uppercase mb-20">Blog</h5>
-                        <div class="line-shape-white"></div>
-                        <ul class="footer-nav">
-                            <li><a href="#">모카 블로그</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>  
-            <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
-                <p class="footer-text m-0"> &copy; <a href="http://in-datalab.com">in-DataLAB</a> | 2017-2018</p>
-                <div class="footer-social d-flex justify-content-between align-items-center flex-wrap">
-                    <a href="https://www.facebook.com/moqa.platform/"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="https://github.com/likelionSungGuk"><i class="fa fa-github"></i></a>
-                </div>
-            </div>
-        </div>  
-    </footer>   
-<!--/.Footer-->
+<!-- about section -->
+<section id="about" class="section-border">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="section-title">
+					<strong>02</strong>
+					<h1 class="heading bold">APPLICATION</h1>
+						<hr>
+						<div class="col-md-12" id="about_logo">
+							<a href="http://moqa.co.kr"><img src="images/moqa-main-img.png" alt="moqa-logo" class="img-responsive wow fadeInUp" id="moqa-logo" data-wow-delay="0.2s"></a>
+						</div>
+				</div>
+			</div>
+			<div class="col-md-12" id="design">
+				<!-- tab panes -->
+					<!--	<div class="col-md-6 col-sm-12">-->
+					<!--		<img src="images/pluto1.png" class="img-responsive" alt="about img1">-->
+					<!--	</div>-->
+					<div class="col-md-12 col-sm-12 desc-align wow fadeInUp" data-wow-delay="0.4s">
+						<h3>쉽게 묻고 쉽게 답한다</h3>
+						<h3>모바일 Q&A 플랫폼 모카</h3>
+						<br>
+					</div>
+                <div class="col-md-12 desc-align wow fadeInUp get-start-area">
+                	<p>현재 Closed Beta 진행중입니다!</p>
+	                <div class="app-download-area">
+	                    <div class="app-download-btn wow fadeInUp" data-wow-delay="0.2s">
+	                        <!-- Google Store Btn -->
+	                        <a href="#">
+	                            <i class="fa fa-android"></i>
+	                            <p class="mb-0"><span>available on</span> Google Store</p>
+	                        </a>
+	                    </div>
+	                    <div class="app-download-btn wow fadeInDown" data-wow-delay="0.4s">
+	                        <!-- Apple Store Btn -->
+	                        <a href="#">
+	                            <i class="fa fa-apple"></i>
+	                            <p class="mb-0"><span>available on</span> Apple Store</p>
+	                        </a>
+	                    </div>
+	                </div>                        
+	            </div>
+			</div>
+		</div>
+	</div>
+</section>
 
-    <!-- ***** Footer Area Start ***** -->
-    <!-- CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <!-- main - carousel -->
-    <script src="js/main.js"></script>
-    <!-- Jquery-2.2.4 JS -->
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap-4 Beta JS -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- All Plugins JS -->
-    <script src="js/plugins.js"></script>
-    <!-- Slick Slider Js-->
-    <script src="js/slick.min.js"></script>
-    <!-- Footer Reveal JS -->
-    <!-- <script src="js/footer-reveal.min.js"></script> -->
-    <!-- Active JS -->
-    <script src="js/active.js"></script>
+<!-- Team section -->
+
+<section id="team" class="section-border">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="section-title">
+					<strong>03</strong>
+					<h1 class="heading bold">TEAM</h1>
+					<hr>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="team-header">Management</div>
+				<div class="underline"></div>
+				<div class="team-content">
+				<!--person1-->
+					<h3>서호성</h3>
+					<p>일본 리츠메이칸대학교<br>
+						현대자동차 마케팅<br>
+						이노션 리서치 컨설턴트
+					</p>
+					<br>					
+				<!--person2-->
+					<h3>류청</h3>
+					<p>성균관대학교 글로벌경영학</p>
+					<br>
+				<!--person3-->
+					<h3>김병기</h3>
+					<p>연세대학교 경영학<br>
+						한국자산관리공사<br>
+						LG상사
+					</p>
+			</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="team-header">Development</div>
+				<div class="underline"></div>
+				<div class="team-content">
+				<!--person1-->
+					<h3>김선율</h3>
+					<p>성균관대학교 통계학박사</p>
+					<br>
+				<!--person2-->
+					<h3>조성국</h3>
+					<p>성균관대학교 글로벌경영학</p>
+					<br>	
+				<!--person3-->
+					<h3>이태주</h3>
+					<p>성균관대학교 글로벌경영학<br>
+						인포매틱스
+					</p>
+					<br>
+			</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="team-header">Research</div>
+				<div class="underline"></div>
+				<div class="team-content">
+				<!--person1-->
+					<h3>윤명환</h3>
+					<p>고려대학교 경영학과<br>
+						닐슨코리아/글로벌리서치
+						</p>
+					<br>
+				<!--person2-->
+					<h3>리서치 연구 본부</h3>
+					<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#researchTeam">자세히 알아보기</button>
+
+				  <!-- Modal -->
+				  <div class="modal fade" id="researchTeam" role="dialog">
+				    <div class="modal-dialog modal-lg">
+				    
+				      <!-- Modal content-->
+				      <div class="modal-content">
+				        <div class="modal-header">
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				          <h4 class="modal-title">리서치 팀</h4>
+				        </div>
+				        <div class="modal-body">
+				          <img src="images/researchTeam.png" alt="리서치 연구본부"/>
+				        </div>
+				        <div class="modal-footer">
+				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+			  </div>		
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="team-header">Consultants</div>
+				<div class="underline"></div>
+				<div class="team-content">
+				<!--person1-->
+					<h3>오정석</h3>
+					<p>서울대학교 경영학 - 경영공학<br>
+						Stanford Univ. 경영공학박사
+					</p>
+					<br>
+				<!--person2-->
+					<h3>박진수</h3>
+					<p>서울대학교 경영학 - MIS<br>
+						Univ. of Arizona 경영학박사
+					</p>
+					<br>	
+				<!--person3-->
+					<h3>박남규</h3>
+					<p>서울대학교 경영학 - 기업전략<br>
+						New York Univ. 경영학박사
+					</p>
+					<br>
+				</div>
+			</div>
+		</div><!-- row -->
+	</div><!-- Container -->
+</section>
+ <!--portfolio/Carousel section -->
+<div id="portfolio" class="section-border">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="section-title">
+					<strong>04</strong>
+					<h1 class="heading bold">PARTNERS</h1>
+					<hr>
+				</div>
+			</div>
+			<div class="row" id="partners-row">
+				<div class="owl-carousel" id="partners">
+					<div class="portfolio-img"><img src="images/partners/logo-SBG.jpg"  alt="SB"/></div>
+					<div class="portfolio-img"><img src="images/partners/logo-innocean.jpg"  alt="이노션"/></div>
+					<div class="portfolio-img"><img src="images/partners/logo-GlobalResearch.jpg"  alt="글로벌리서치"/></div>
+					<div class="portfolio-img"><img src="images/partners/logo-yakult.jpg"  alt="야쿠르트"/></div>
+
+				  <div class="portfolio-img"><img src="images/partners/dp2.jpg"  alt="한화 드림플러스"/></div>
+				  <div class="portfolio-img"><img src="images/partners/aws2.jpg"  alt="아마존 웹서비스"/></div>
+				  <div class="portfolio-img"><img src="images/partners/kci2.jpg"  alt="한국창의성학회"/></div>
+				  <!--<div class="portfolio-img"><img src="images/partners/krun2.jpg"  alt="케이런벤쳐스"/></div>-->
+				</div>	 
+			</div>
+		</div>
+	</div>
+</div>		
+<!--portfolio/ Carousel end-->
+
+<!-- pricing section -->
+<!--<section id="pricing">-->
+<!--	<div class="container">-->
+<!--		<div class="row">-->
+<!--			<div class="col-md-12 col-sm-12 text-center">-->
+<!--				<div class="section-title">-->
+<!--					<strong>05</strong>-->
+<!--					<h1 class="heading bold">OUR PRICING</h1>-->
+<!--					<hr>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="col-md-4 col-sm-6">-->
+<!--				<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">-->
+<!--					<div class="plan_title">-->
+<!--						<i class="icon-mobile medium-icon"></i>-->
+<!--						<h3>BASIC</h3>-->
+<!--						<h2>$150 <span>per year</span></h2>-->
+<!--					</div>-->
+<!--					<ul>-->
+<!--                    	<li>100 GB Cloud Storage</li>-->
+<!--						<li>5 Pro Websites</li>-->
+<!--						<li>10 Secured Emails</li>-->
+<!--                        <li>24-hour Support</li>-->
+<!--					</ul>-->
+<!--					<button class="btn btn-warning">Get it now</button>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="col-md-4 col-sm-6">-->
+<!--				<div class="plan plan-two wow bounceIn" data-wow-delay="0.3s">-->
+<!--					<div class="plan_title">-->
+<!--						<i class="icon-desktop medium-icon"></i>-->
+<!--						<h3>BUSINESS</h3>-->
+<!--						<h2>$260 <span>per year</span></h2>-->
+<!--					</div>-->
+<!--					<ul>-->
+<!--						<li>200 GB Cloud Storage</li>-->
+<!--						<li>10 Pro Websites</li>-->
+<!--						<li>20 Secured Emails</li>-->
+<!--                        <li>30-Minute Support</li>-->
+<!--					</ul>-->
+<!--					<button class="btn btn-warning">Take this!</button>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="col-md-4 col-sm-6">-->
+<!--				<div class="plan plan-three wow bounceIn" data-wow-delay="0.3s">-->
+<!--					<div class="plan_title">-->
+<!--						<i class="icon-cloud medium-icon"></i>-->
+<!--						<h3>PROFESSIONAL</h3>-->
+<!--						<h2>$380 <span>per year</span></h2>-->
+<!--					</div>-->
+<!--					<ul>-->
+<!--						<li>500 GB Cloud Storage</li>-->
+<!--						<li>20 Pro Websites</li>-->
+<!--						<li>40 Secured Emails</li>-->
+<!--                        <li>Live Support</li>-->
+<!--					</ul>-->
+<!--					<button class="btn btn-warning">Buy Now</button>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>		-->
+<!--</section>-->
+
+<!-- contact section -->
+<section id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center">
+				<div class="section-title2">
+					<strong>05</strong>
+					<h1 class="heading bold">CONTACT US</h1>
+					<hr>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12 contact-info">
+				<h2 class="heading bold">CONTACT INFO</h2>
+				<p>서울특별시 서초구 강남대로 311 한화 드림플러스 1220호</p>
+				<p>311, Gangnam-daero, Seocho-gu, Seoul, Republic of Korea</p>
+				<div class="col-md-6 col-sm-4">
+					<h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i> EMAIL</h3>
+					<p>contact@in-datalab.com</p>
+				</div>
+				<div class="col-md-6 col-sm-4">
+					<h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i> PHONES</h3>
+					<p>+82 2-558-4218</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<!--<form action="#" method="get" class="wow fadeInUp" data-wow-delay="0.6s">-->
+				<form action="https://www.enformed.io/airvksng" method="POST" class="wow fadeInUp" data-wow-delay="0.6s" >
+					<div class="col-md-6 col-sm-6">
+						<input type="text" class="form-control" placeholder="Name" name="name">
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<input type="email" class="form-control" placeholder="Email" name="email">
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<textarea class="form-control" placeholder="Message" rows="7" name="message"></textarea>
+					</div>
+					<div class="col-md-offset-4 col-md-8 col-sm-offset-4 col-sm-8">
+						<input type="submit" class="form-control" value="SEND MESSAGE">
+					</div>
+				</form>
+			</div>
+			<br></br>
+			<div class="col-md-12 col-sm-12 map">
+				<p>Seoul</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.7236985634136!2d127.0280925157801!3d37.490846079812094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca14f9353776d%3A0x48b280d65fb05cbc!2sDream+Plus+Gangnam!5e0!3m2!1sen!2skr!4v1508472699978" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen data-wow-delay="0.6s"></iframe>
+				<p>Tokyo</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.192033957204!2d139.72892571574005!3d35.64764008020221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b09c382e6ad%3A0xc7feb1d4fbc2bd17!2z7J2867O4IOOAkjEwNi0wMDQ3IFTFjWt5xY0tdG8sIE1pbmF0by1rdSwgTWluYW1pYXphYnUsIDMgQ2hvbWXiiJIyMOKIkjEg6bq75biD44Kw44Oq44O844Oz44OG44Op44K5IO-8lemajg!5e0!3m2!1sko!2skr!4v1523874314079" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- footer section -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<hr>
+				<p>Copyright © 2017-2018 in-DataLAB. All Rights Reserved</p>
+				<a href="/privacy.html">개인정보처리방침</a>&nbsp;<a href="/userAgreement.html">이용약관</a>
+				<!--<ul class="social-icon">-->
+				<!--	<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>-->
+				<!--	<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>-->
+				<!--	<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>-->
+				<!--	<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>-->
+				<!--	<li><a href="#" class="fa fa-tumblr wow fadeIn" data-wow-delay="0.9s"></a></li>-->
+				<!--</ul>-->
+			</div>
+		</div>
+	</div>
+</footer>
+<script>  
+//Owl Carousel
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items:5,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true
+});
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+})
+//
+</script>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/imagesloaded.min.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
 </body>
-
 </html>
