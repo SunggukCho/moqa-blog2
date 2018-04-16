@@ -27,6 +27,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     authorize! :update, @post
+    @categories = Category.all
   end
 
   # POST /posts

@@ -341,7 +341,7 @@ footer .footer-nav li a:hover {
 }
 
 .footer-bottom .footer-text a {
-  color: #f9c400;
+  color: #f9c400 !important;
 }
 
 .footer-bottom .footer-text a:hover {
@@ -353,9 +353,7 @@ footer .footer-nav li a:hover {
     margin-top: 10px;
   }
 }
-.footer-social{
-    float: right;
-}
+
 .footer-social a {
   border: 1px solid rgba(0, 0, 0, 0.15);
   width: 30px;
