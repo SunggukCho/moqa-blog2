@@ -1,4 +1,11 @@
 CarrierWave.configure do |config|
+  # Use AWS storage if in production
+  if Rails.env.production?
+    CarrierWave.configure do |config|
+      config.storage = :fog
+    end
+  end
+
   config.fog_provider = 'fog/aws'  # required
   config.fog_credentials = {
     provider:              'AWS',  # required
@@ -8,3 +15,5 @@ CarrierWave.configure do |config|
   }
   config.fog_directory  = 'moqa-blog'            # S3 bucket name
 end
+
+
