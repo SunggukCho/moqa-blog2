@@ -8,6 +8,7 @@
 /.bundle
 
 # Ignore the default SQLite database.
+
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
@@ -19,3 +20,10 @@
 # Ignore application configuration
 /config/secrets.yml
 /config/application.yml
+
+.rspec
+/coverage/
+/spec/tmp
+
+/.bundle/
+/lib/bundler/man/
