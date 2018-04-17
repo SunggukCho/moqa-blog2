@@ -1,20 +1,21 @@
 source 'https://rubygems.org'
 
-gem 'figaro'
-gem 'devise'
-gem 'mini_magick'
-gem 'carrierwave'
-gem 'ckeditor'
-gem 'kaminari'
-gem 'bootstrap4-kaminari-views'
-gem 'cancancan'
-gem 'rolify'
-gem 'acts-as-taggable-on'
+gem 'figaro' # Application secret key base
+gem 'devise' # Users sign_in/up
+gem 'mini_magick' #img upload
+gem 'carrierwave' #img upload
+gem 'fog-aws' #aws carrierwave img
+gem 'ckeditor' #Form Editor
+gem 'kaminari' #pagination
+gem 'bootstrap4-kaminari-views' #pagination view
+gem 'cancancan' # role & possibilities
+gem 'rolify' # add_role 
+gem 'acts-as-taggable-on' #tags
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', :group => :development
-gem 'mysql2', :group => :production
+gem 'sqlite3', :group => :development 
+gem 'mysql2', :group => :production 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -22,7 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby #for aws ec2 deploy
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
